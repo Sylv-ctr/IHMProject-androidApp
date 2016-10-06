@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context="fac.protoim.vueDetail">
+
+    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:background="@color/colorRed">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:id="@+id/header"
+            >
+
+            <ImageView
+                android:clickable="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back"
+                android:id="@+id/backHome"
+                android:layout_margin="@dimen/activity_vertical_margin"/>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <include layout="@layout/content_vue_detail" />
+
+
+</android.support.design.widget.CoordinatorLayout>

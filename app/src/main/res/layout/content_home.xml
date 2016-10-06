@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_home"
+    tools:context=".home">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <TabHost
+            android:id="@+id/tabHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TabWidget
+                    android:background="#f1cfcf"
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TabWidget>
+
+
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:isScrollContainer="true">
+
+
+
+
+
+
+                    <RelativeLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ffffff"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:orientation="vertical"
+                            android:id="@+id/vueSaveParti"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <ImageButton
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:clickable="true"
+                                android:background="@drawable/croix"
+                                android:id="@+id/delbutton"
+                                android:layout_margin="10dp"
+                                android:layout_alignParentRight="true"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/jour"
+                                android:text="24"
+                                android:textStyle="bold"
+                                android:textSize="25sp"
+                                android:layout_marginTop="8dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginLeft="20dp"/>
+
+                            <TextView
+                                android:layout_below="@id/jour"
+                                android:text="AVR"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@id/jour"
+                                android:id="@+id/mois"
+                                android:textSize="15sp"/>
+
+
+                            <LinearLayout
+                                android:layout_marginTop="6dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_width="8dp"
+                                android:layout_height="50dp"
+                                android:orientation="vertical"
+                                android:layout_toEndOf="@id/jour"
+                                android:id="@+id/barre"
+                                android:background="@color/colorRed"></LinearLayout>
+
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/typeEvent"
+                                android:layout_toEndOf="@id/barre"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="15sp"
+                                android:text="Conférence"
+                                android:textStyle="bold"/>
+
+
+                            <TextView
+                                android:layout_alignLeft="@id/typeEvent"
+                                android:text="Voici une conférence"
+                                android:layout_marginTop="8dp"
+                                android:layout_below="@id/typeEvent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:id="@+id/descEvent"/>
+
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#ffffff"
+                        android:orientation="vertical">
+
+
+                        <android.support.design.widget.FloatingActionButton
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/fabTabCome1"
+                            app:backgroundTint="@color/colorRed"
+                            app:borderWidth="0dp"
+                            app:elevation="6dp"
+                            app:fabSize="normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/fab_margin"
+                            android:src="@drawable/cal"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:layout_alignTop="@id/fabTabCome1"
+                            android:text="À la une"
+                            android:gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:textSize="20dp"
+                            android:textColor="@color/colorRed"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/uneTabCome"/>
+
+
+                        <RelativeLayout
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="155dp"
+                            android:layout_below="@id/fabTabCome1"
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/test"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin">
+                            <ListView
+
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/listUneCome">
+
+                            </ListView>
+                        </RelativeLayout>
+
+                        <android.support.design.widget.FloatingActionButton
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/fabTabCome2"
+                            app:backgroundTint="@color/colorRed"
+                            app:borderWidth="0dp"
+                            app:elevation="6dp"
+                            app:fabSize="normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/fab_margin"
+                            android:src="@drawable/cal"
+                            android:layout_marginStart="8dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/test"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            android:textColor="@color/colorRed"
+                            android:text="Prochainement"
+                            android:layout_marginTop="15dp"
+                            android:id="@+id/prochTabCome"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignTop="@id/fabTabCome2"/>
+
+
+                        <RelativeLayout
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="350dp"
+                            android:layout_below="@id/fabTabCome2"
+                            android:layout_marginStart="10dp"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:paddingBottom="@dimen/activity_vertical_margin">
+
+                            <ListView
+                                android:id="@+id/listProchTabcome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/tab3"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical">
+
+
+
+                            <ListView
+
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/listUnePast">
+
+                            </ListView>
+
+
+
+
+
+
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+</RelativeLayout>
+</ScrollView>
